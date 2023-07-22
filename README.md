@@ -49,7 +49,7 @@ Include this JWT in the Authorization header of your requests to the `/v1/weathe
 
 ## Testing
 To run the tests, use the following command:
-`php artisan migrate`
+`php artisan test`
 
 ## License
 This project is licensed under the MIT License.
