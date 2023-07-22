@@ -19,7 +19,7 @@ class RapidApiService implements RapidApiServiceProvider
         $this->headers = ['X-RapidAPI-Key' => $this->apiKey,'X-RapidAPI-Host' => $this->apiHost, 'Content-Type' => 'application/json;charset=utf-8'];
     }
 
-    public function getIterableFromProvider(string $uri, string $dataIndex = '', array $params = []): ?iterable
+    public function getIterableFromProvider(string $uri, string $dataIndex = ''): ?iterable
     {
         $url = $this->baseUrl . $uri;
         $response = Http::withHeaders($this->headers)->get($url);

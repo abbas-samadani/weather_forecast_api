@@ -14,7 +14,7 @@ class WeatherController extends Controller
         $this->weatherService = $weatherService;
     }
 
-    public function getWeather($city)
+    public function getWeather(string $city)
     {
         $data = $this->weatherService->getWeatherBasedOnLocation($city);
         $modifiedData = new WeatherResource($data);

@@ -17,7 +17,6 @@ class UserSeeder extends Seeder
             'email' => 'test@test.com',
             'name' => 'test',
             'password' => 'testtest',
-            // You can set other attributes as well if needed.
         ]);
     }
 }

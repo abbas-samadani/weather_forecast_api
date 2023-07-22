@@ -21,7 +21,10 @@ class WeatherResource extends JsonResource
             'lon' => $this['location']['lon'],
             'temp_c' => $this['current']['temp_c'],
             'temp_f' => $this['current']['temp_f'],
-            'condition' => $this['current']['condition']['text']
+            'condition' => $this['current']['condition']['text'],
+            '_links' => [  // Adding HAL links
+                'self' => route('getWeather', ['city' => $this['location']['name']]),
+            ],
         ];
     }
 }
