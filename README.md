@@ -35,9 +35,10 @@ To install the API, follow these steps:
 1. Clone the repository
 2. Run `composer install` to install the necessary dependencies
 3. Copy `.env.example` to `.env` and fill in your database and RapidAPI credentials
-4. Run `php artisan migrate` to create the necessary database tables
-5. Run `php artisan db:seed --class=UserSeeder` to seed the database with test data
-6. Run `php artisan serve` to start the server
+4. Run `php artisan jwt:secret` to update .env with jwt secret
+5. Run `php artisan migrate` to create the necessary database tables
+6. Run `php artisan db:seed --class=UserSeeder` to seed the database with test data
+7. Run `php artisan serve` to start the server
 
 ## Usage
 To use the API, send a POST request to `/v1/auth/login` with the following credentials to authenticate and receive a JWT:
